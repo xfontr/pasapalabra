@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;900&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    font-family: "Montserrat", arial;
+    font-size: 17px;
+    --secondary-color: #003844;
+}
+
+body {
+    height: 90vh;
+    background-color: var(--button-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(0deg, hwb(199 0% 0% / 0.5), rgba(167, 213, 239, 0.7)), url(https://images.genial.ly/5c9357997082c2326aa1498d/062d3b29-e723-411b-86f5-54888b2d1013.gif?genial&1651363200063);
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+
+}
+
+div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+input {
+    font-family: inherit;
+    outline: none;
+    font-size: 1.2em;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    border: none;
+    color: rgba(--secondary-color);
+    height: 50px;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.364);
+    border-radius: 15px;
+}
+
+button {
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 1em;
+    padding: 13px 28px 13px 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 10px;
+    border: solid 1px var(--secondary-color);
+    color: var(--secondary-color);
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.3);
+
+}
+
+button:disabled {
+    opacity: 50%;
+}
+
+button:hover{
+    transition: 0.4s;
+    background-color: rgba(255, 255, 255, 0.6);
+    transform: scale(1.05);
+}
+
+#sendAnswer {
+    padding: 11px 23px 11px 23px;
+}
+
+#sendPasapalabra {
+    margin-right: 20px;
+    display: none;
+}
+
+#mainCircle {
+    margin-top: 50px;
+    width: 450px;
+}
+
+#middleColumn {
+    width: 80%;
+}
+
+
+#leftColumn {
+    height: 100%;
+    align-items: flex-end;
+    justify-content: flex-end;
+    width: 400px;
+}
+
+#rightColumn {
+    height: 100%;
+    align-items: flex-end;
+    justify-content: flex-start;
+    width: 400px;
+}
+
+#rightColumn img {
+    border-radius: 50%;
+    border: solid 6px var(--secondary-color);
+}
+
+#outcomeImg {
+    display: none;
+}
+
+.innerCircle {
+    position: absolute;
+    display: flex;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    background-color: var(--secondary-color);
+
+    border-right: solid 2px white;
+    border-bottom: solid 2px white;
+
+}
+
+.innerCircle p {
+    font-size: 1.8em;
+    color: white;
+    line-height: 0;
+    font-weight: 700;
+
+}
+
+#currentLetter {
+    color: rgba(74, 124, 149, 0.14);
+    font-weight: 700;
+    font-size: 18em;
+    margin-top: -120px;
+    margin-bottom: -184px;
+}
+
+#currentQuestion {
+    text-align: center;
+    width: 100%;
+    font-weight: 400;
+    font-size: 1.1em;
+    line-height: 1.2em;
+}
+
+.right {
+    background-color: rgb(27, 100, 27);
+}
+
+.wrong {
+    background-color: rgb(142, 20, 20);
+}
+
+#timer,
+#score {
+    border-radius: 50%;
+}
+
+#timer {
+    width: 125px;
+    height: 125px;
+
+    font-size: 2em;
+    font-weight: 900;
+    color: var(--secondary-color);
+
+}
+
+circle {
+    overflow: visible;
+    fill: white;
+    stroke: url(#GradientColor);
+    stroke-width: 17px;
+    stroke-dashoffset: 0;
+    stroke-dasharray: 472;
+    transform: scaleX(0.76) scaleY(0.76);
+    animation: anim 2s linear forwards;
+    box-shadow: 4px 4px 35px 4px rgba(145, 179, 196, 0.5);
+}
+
+#timeLog {
+    margin-bottom: -120px;
+    z-index: 10;
+}
+
+#score {
+    margin-left: -20px;
+    margin-bottom: 19px;
+    z-index: -1;
+    background-color: var(--secondary-color);
+    width: 80px;
+    height: 80px;
+
+    font-size: 1.2em;
+    font-weight: bold;
+    color: white;
+}
+
+
+/**/
+
+
+table {
+    display: none;
+    border: solid 2px var(--secondary-color);
+}
+
+.content-table {
+    border-collapse: collapse;
+    overflow: hidden;
+    border-radius: 5px;
+    width: 75%;
+}
+
+.content-table thead tr {
+    background-color: #f0f0f0;
+    color: #3e5869;
+    text-align: left;
+    font-weight: bold;
+}
+
+.content-table th,
+.content-table td {
+    padding: 4px 6px;
+}
+
+.content-table tbody tr {
+    border-bottom: 1px solid #3e5869;
+}
+
+.content-table tbody tr:nth-of-type(even) {
+    background-color: #f0f0f0;
+}
+
+.content-table tbody tr:last-of-type {
+    border-bottom: 2px solid#3e5869;
+}
+
+.content-table tbody tr.active-row {
+    font-weight: bold;
+    color: #f0f0f0;
+}

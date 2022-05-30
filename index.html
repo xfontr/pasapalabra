@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pasapalabra</title>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,300,0,0" />
+</head>
+
+<body>
+  <div id="leftColumn">
+    <div id="timer">
+      <p id="timeLog">0</p>
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+      <defs>
+        <linearGradient id="GradientColor">
+          <stop offset="100%" stop-color="#003844" />
+        </linearGradient>
+      </defs>
+      <circle cx="80" cy="80" r="70" stroke-linecap="round" />
+    </svg>
+    </div>
+
+    <div id="score">
+      <p id="scoreLog">0</p>
+    </div>
+  </div>
+
+  <div id="middleColumn">
+    <div id="mainCircle">
+      <div id="mainContent">
+        <p id="currentLetter"></p>
+        <p id="currentQuestion">¡Bienvenido al Pasapalabra!<br><br>Cuando presiones Empezar, te preguntaremos una
+          definición por cada letra del rosco, y deberás adivinar a qué palabra corresponde (que contenga dicha letra).
+          ¡Tendrás 120 segundos! <br><br> Antes de empezar, por favor, indícanos tu nombre. </p>
+
+        <table class="content-table" id="historial">
+          <thead>
+            <tr>
+              <th style="width: 10%">Rango</th>
+              <th style="width: 48%;">Nombre</th>
+              <th style="width: 15%;">Bien</th>
+              <th style="width: 15%;">Mal</th>
+              <th style="width: 15%;">Puntos</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <input type="text" id="userInput"></input>
+        <button id="sendPasapalabra" onClick="pasapalabra()">Pasapalabra</button>
+        <button id="sendAnswer" onClick="startOrSendAnswer()">Empezar <span class="material-symbols-outlined">
+            subdirectory_arrow_right
+          </span></button>
+      </div>
+    </div>
+  </div>
+  <div id="rightColumn">
+    <img id="outcomeImg" src="https://c.tenor.com/_hV2UgYngdcAAAAd/sad-dog.gif" width="150" height="150">
+  </div>
+</body>
+
+<footer>
+  <script src="index.js"></script>
+  <link rel="stylesheet" href="index.css">
+  </link>
+</footer>
+
+</html>
